@@ -558,6 +558,7 @@ class Template(object):
         if len(self.mappings) >= MAX_MAPPINGS:
             raise ValueError('Maximum mappings %d reached' % MAX_MAPPINGS)
         self.mappings[name] = mapping
+        return name
 
     def add_parameter(self, parameter):
         if len(self.parameters) >= MAX_PARAMETERS:
